@@ -88,4 +88,6 @@ ENV/
 # Rope project settings
 .ropeproject
 
-uploadlog.txt
+dbxupload.log
+dbx.cfg
+test/*
