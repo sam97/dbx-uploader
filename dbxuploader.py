@@ -130,7 +130,7 @@ def ulfile(dbxconn, filename, location='/', replace=False, verbosity=1):
 	log("Opened \"{}\"".format(filename), 'INFO', verbosity)
 	log("Uploading \"{}\"".format(filename), 'INFO', verbosity)
 	# log("replace value is {}".format(str(replace)), 'DEBUG', 2) # DEBUG
-	filemetadata = dbxconn.files_upload(data, location + filename,
+	filemetadata = dbxconn.files_upload(data.read(), location + filename,
 	                mode=(dropbox.files.WriteMode.overwrite if replace
 	                      else dropbox.files.WriteMode.add),
 	                autorename=not(replace))
